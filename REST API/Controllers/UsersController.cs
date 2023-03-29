@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using REST_API.Entities;
 using REST_API.Repositories.Contracts;
-using System.Data;
 
 namespace REST_API.Controllers
 {
@@ -19,7 +18,6 @@ namespace REST_API.Controllers
 
         // GET: api/Users
         [HttpGet]
-        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
             try
@@ -64,7 +62,7 @@ namespace REST_API.Controllers
                 var user = await userRepository.GetUser(id);
                 if (user is null)
                     return NotFound();
-                user.Username = userUpdate.Username;
+                user.Name = userUpdate.Name;
                 user.Password = userUpdate.Password;
                 user.Role = userUpdate.Role;
                 await userRepository.UpdateUser(user);
