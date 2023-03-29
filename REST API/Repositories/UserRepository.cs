@@ -30,9 +30,9 @@ namespace REST_API.Repositories
             return user;
         }
 
-        public async Task<User> GetUser(string username)
+        public async Task<User> GetUser(string email)
         {
-            var user = await restApiDbContext.Users.FirstOrDefaultAsync(u => u.Username == username);
+            var user = await restApiDbContext.Users.FirstOrDefaultAsync(u => u.Email == email);
             return user;
         }
 

@@ -13,19 +13,24 @@ namespace REST_API.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<User>(entity => entity.HasIndex(u => u.Name).IsUnique());
+            modelBuilder.Entity<User>(entity => entity.HasIndex(u => u.Email).IsUnique());
+
             modelBuilder.Entity<User>().HasData(new User
             {
                 Id = 1,
-                Username = "Mihai",
-                Password = "Parola",
-                Role = "Owner"
+                Name = "m",
+                Email = "m@m.com",
+                Password = "m",
+                Role = "Admin"
             });
             modelBuilder.Entity<User>().HasData(new User
             {
                 Id = 2,
-                Username = "Ioana",
-                Password = "Parola",
-                Role = "Guest"
+                Name = "i",
+                Email = "i@i.com",
+                Password = "i",
+                Role = "User"
             });
         }
 
