@@ -11148,11 +11148,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repos\\Local projects\\REST API\\REST API.csproj",
+      "projectUniqueName": "D:\\Repos\\rest-api\\REST API\\REST API.csproj",
       "projectName": "REST API",
-      "projectPath": "D:\\Repos\\Local projects\\REST API\\REST API.csproj",
+      "projectPath": "D:\\Repos\\rest-api\\REST API\\REST API.csproj",
       "packagesPath": "C:\\Users\\cip\\.nuget\\packages\\",
-      "outputPath": "D:\\Repos\\Local projects\\REST API\\obj\\",
+      "outputPath": "D:\\Repos\\rest-api\\REST API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\cip\\AppData\\Roaming\\NuGet\\NuGet.Config",

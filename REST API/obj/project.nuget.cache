@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YgWVD76erBbjZvfb+CYk5FgZbGLeCJtNHa6uWqJQJMra1cWPyWT9MDhi4GFqq+SeQqIy0QrfMDrdHjq66rpv4g==",
+  "dgSpecHash": "38eb4gFozzZIyvvHC728Mt15yyX0U58/DWAXohgK03KBQS6z7M/guEpxeds4uHflH5qe21bM1O6SPC+lKiWknQ==",
   "success": true,
-  "projectFilePath": "D:\\Repos\\Local projects\\REST API\\REST API.csproj",
+  "projectFilePath": "D:\\Repos\\rest-api\\REST API\\REST API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cip\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\cip\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
