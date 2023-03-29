@@ -8,10 +8,12 @@ using REST_API.Repositories.Contracts;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using REST_API.Dtos;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace REST_API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/auth")]
     [ApiController]
     public class AuthController : ControllerBase
     {
@@ -24,25 +26,54 @@ namespace REST_API.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost]
-        [Route("login")]
-        public async Task<ActionResult> Login([FromBody] UserLogin userLogin)
+        [HttpPost("register")]
+        public async Task<ActionResult> Register([FromBody] RegisterDto registerDto)
         {
-            var user = await Authenticate(userLogin);
+            // Check if the username is already in use
+            var existingUser = await UserRepository.GetUser(registerDto.Email);
+
+            if (existingUser is not null)
+            {
+                return BadRequest("Email address is already in use");
+            }
+
+            // Hash the password
+            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(registerDto.Password);
+
+            // Create a new user entity
+            var newUser = new User
+            {
+                Name = registerDto.Name,
+                Email = registerDto.Email,
+                Password = hashedPassword,
+                Role = "User"
+            };
+
+            // Add the user to the database
+            await UserRepository.AddUser(newUser);
+
+            return Ok("User registered successfully");
+        }
+
+        [AllowAnonymous]
+        [HttpPost("login")]
+        public async Task<ActionResult> Login([FromBody] LoginDto loginDto)
+        {
+            var user = await Authenticate(loginDto);
             if (user is not null)
             {
                 var token = GenerateToken(user);
-                return Ok(token);
+                Response.Headers.Add("Authorization", "Bearer " + token);
+                return Ok("Login successful");
             }
             return NotFound("User not found");
         }
 
         [Authorize]
-        [HttpPost]
-        [Route("logout")]
-        public async Task<IActionResult> Logout()
+        [HttpPost("logout")]
+        public IActionResult Logout()
         {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            Response.Headers.Remove("Authorization");
             return Ok("User logged out");
         }
 
@@ -52,7 +83,7 @@ namespace REST_API.Controllers
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
             var claims = new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Username),
+                new Claim(ClaimTypes.NameIdentifier, user.Name),
                 new Claim(ClaimTypes.Role, user.Role)
             };
             var token = new JwtSecurityToken(Config["Jwt:Issuer"],
@@ -63,9 +94,9 @@ namespace REST_API.Controllers
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        private async Task<User?> Authenticate(UserLogin userLogin)
+        private async Task<User?> Authenticate(LoginDto loginDto)
         {
-            var currentUser = await UserRepository.GetUser(userLogin.UserName);
+            var currentUser = await UserRepository.GetUser(loginDto.Email);
             if (currentUser is not null)
             {
                 return currentUser;

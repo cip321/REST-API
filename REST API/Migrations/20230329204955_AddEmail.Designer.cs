@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using REST_API.Data;
 
@@ -10,9 +11,11 @@ using REST_API.Data;
 namespace REST_API.Migrations
 {
     [DbContext(typeof(RestApiDbContext))]
-    partial class RestApiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230329204955_AddEmail")]
+    partial class AddEmail
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

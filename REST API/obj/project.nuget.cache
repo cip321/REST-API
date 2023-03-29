@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "09mZyJiRqoDSUrp1ICb4FIyQcwHZpL8Zzo/8UdzpX8aVKUSblII0CZn7bciLq1XbDAD14PovgxkDS23LGZCXEQ==",
+  "dgSpecHash": "YgWVD76erBbjZvfb+CYk5FgZbGLeCJtNHa6uWqJQJMra1cWPyWT9MDhi4GFqq+SeQqIy0QrfMDrdHjq66rpv4g==",
   "success": true,
   "projectFilePath": "D:\\Repos\\Local projects\\REST API\\REST API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cip\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\cip\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\cip\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\cip\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\cip\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.4\\microsoft.aspnetcore.authentication.jwtbearer.7.0.4.nupkg.sha512",
     "C:\\Users\\cip\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.4\\microsoft.aspnetcore.openapi.7.0.4.nupkg.sha512",
