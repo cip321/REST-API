@@ -1,9 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using REST_API.Entities;
-using REST_API.Repositories.Contracts;
+﻿using Microsoft.AspNetCore.Mvc;
+using REST_API.Api.Entities;
+using REST_API.Api.Repositories.Contracts;
 
-namespace REST_API.Controllers
+namespace REST_API.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
