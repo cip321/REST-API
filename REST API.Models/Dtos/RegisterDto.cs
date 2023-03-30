@@ -1,11 +1,9 @@
-﻿namespace REST_API.Api.Entities
+﻿namespace REST_API.Models.Dtos
 {
-    public class User
+    public class RegisterDto
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public string Role { get; set; }
     }
 }

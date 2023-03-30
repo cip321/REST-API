@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using REST_API.Data;
-using REST_API.Entities;
-using REST_API.Repositories.Contracts;
+using REST_API.Api.Data;
+using REST_API.Api.Entities;
+using REST_API.Api.Repositories.Contracts;
 
-namespace REST_API.Repositories
+namespace REST_API.Api.Repositories
 {
     public class UserRepository : IUserRepository
     {

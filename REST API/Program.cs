@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using REST_API.Data;
-using REST_API.Repositories;
-using REST_API.Repositories.Contracts;
+using REST_API.Api.Data;
+using REST_API.Api.Repositories;
+using REST_API.Api.Repositories.Contracts;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);

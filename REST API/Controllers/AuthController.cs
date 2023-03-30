@@ -1,17 +1,14 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using REST_API.Entities;
-using REST_API.Repositories.Contracts;
+using REST_API.Api.Entities;
+using REST_API.Api.Repositories.Contracts;
+using REST_API.Models.Dtos;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using REST_API.Dtos;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 
-namespace REST_API.Controllers
+namespace REST_API.Api.Controllers
 {
     [Route("api/auth")]
     [ApiController]
