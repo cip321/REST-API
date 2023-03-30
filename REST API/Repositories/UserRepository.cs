@@ -1,9 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using REST_API.Api.Data;
-using REST_API.Api.Entities;
-using REST_API.Api.Repositories.Contracts;
+﻿using HomeBar.Data;
+using HomeBar.Entities;
+using HomeBar.Repositories.Contracts;
+using Microsoft.EntityFrameworkCore;
 
-namespace REST_API.Api.Repositories
+namespace HomeBar.Repositories
 {
     public class UserRepository : IUserRepository
     {

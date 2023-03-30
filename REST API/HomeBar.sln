@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "REST API.Api", "REST API.Api.csproj", "{D733FD4B-DF77-4481-9777-7115D9985BA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeBar.Api", "HomeBar.Api.csproj", "{D733FD4B-DF77-4481-9777-7115D9985BA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REST API.App", "..\HomeBar\REST API.App.csproj", "{06635163-4140-4831-918E-A9FDB16AB1EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeBar.App", "..\HomeBar\HomeBar.App.csproj", "{06635163-4140-4831-918E-A9FDB16AB1EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REST API.Models", "..\REST API.Models\REST API.Models.csproj", "{E2DF71EF-D218-45ED-99AF-3738DA0929FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeBar.Models", "..\REST API.Models\HomeBar.Models.csproj", "{E2DF71EF-D218-45ED-99AF-3738DA0929FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

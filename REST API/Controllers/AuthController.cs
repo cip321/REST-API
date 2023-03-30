@@ -1,14 +1,14 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using HomeBar.Entities;
+using HomeBar.Models.Dtos;
+using HomeBar.Repositories.Contracts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using REST_API.Api.Entities;
-using REST_API.Api.Repositories.Contracts;
-using REST_API.Models.Dtos;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace REST_API.Api.Controllers
+namespace HomeBar.Controllers
 {
     [Route("api/auth")]
     [ApiController]

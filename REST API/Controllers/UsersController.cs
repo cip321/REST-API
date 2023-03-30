@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using REST_API.Api.Entities;
-using REST_API.Api.Repositories.Contracts;
+﻿using HomeBar.Entities;
+using HomeBar.Repositories.Contracts;
+using Microsoft.AspNetCore.Mvc;
 
-namespace REST_API.Api.Controllers
+namespace HomeBar.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -40,7 +40,7 @@ namespace REST_API.Api.Controllers
             try
             {
                 var user = await userRepository.GetUser(id);
-                if (user is null) 
+                if (user is null)
                     return NotFound();
                 return Ok(user);
             }
