@@ -1,8 +1,7 @@
-﻿namespace REST_API.Dtos
+﻿namespace REST_API.Models.Dtos
 {
-    public class RegisterDto
+    public class LoginDto
     {
-        public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
     }

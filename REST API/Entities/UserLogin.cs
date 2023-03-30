@@ -1,4 +1,4 @@
-﻿namespace REST_API.Entities
+﻿namespace REST_API.Api.Entities
 {
     public class UserLogin
     {
