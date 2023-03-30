@@ -4,7 +4,7 @@
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace REST_API.Migrations
+namespace HomeBar.Migrations
 {
     /// <inheritdoc />
     public partial class AddUsers : Migration

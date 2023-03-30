@@ -1,4 +1,4 @@
-﻿namespace REST_API.Models.Dtos
+﻿namespace HomeBar.Models.Dtos
 {
     public class TokenDto
     {

@@ -1,6 +1,6 @@
-﻿using REST_API.Api.Entities;
+﻿using HomeBar.Entities;
 
-namespace REST_API.Api.Repositories.Contracts
+namespace HomeBar.Repositories.Contracts
 {
     public interface IUserRepository
     {
