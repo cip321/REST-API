@@ -1,6 +1,6 @@
-﻿using System.Text;
+﻿using HomeBar.Models.Dtos;
+using System.Text;
 using System.Text.Json;
-using REST_API.Models.Dtos;
 
 public class Program
 {

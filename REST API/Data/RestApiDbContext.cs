@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using REST_API.Api.Entities;
+﻿using HomeBar.Entities;
+using Microsoft.EntityFrameworkCore;
 
-namespace REST_API.Api.Data
+namespace HomeBar.Data
 {
     public class RestApiDbContext : DbContext
     {

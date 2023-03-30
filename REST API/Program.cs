@@ -1,9 +1,9 @@
+using HomeBar.Data;
+using HomeBar.Repositories;
+using HomeBar.Repositories.Contracts;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using REST_API.Api.Data;
-using REST_API.Api.Repositories;
-using REST_API.Api.Repositories.Contracts;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,7 +20,8 @@ builder.Services.AddDbContext<RestApiDbContext>(options => options.UseSqlServer(
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 //JWT Authentication
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options => {
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,

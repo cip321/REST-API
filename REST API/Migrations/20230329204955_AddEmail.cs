@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace REST_API.Migrations
+namespace HomeBar.Migrations
 {
     /// <inheritdoc />
     public partial class AddEmail : Migration

@@ -1,4 +1,4 @@
-﻿namespace REST_API.Api.Entities
+﻿namespace HomeBar.Entities
 {
     public class User
     {
